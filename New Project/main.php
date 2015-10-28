@@ -4,6 +4,7 @@
 </head>
 <body>
 <?php
+//Going from line 214 of phpflickr class
   // Has curl. Use it!
 				$curl = curl_init("https://api.flickr.com/services/rest");
 				curl_setopt($curl, CURLOPT_POST, true);
