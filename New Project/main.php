@@ -15,6 +15,7 @@
 				curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 				$response = curl_exec($curl);
+				var_dump($response);
 				curl_close($curl);
 ?>
 </body>
