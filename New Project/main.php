@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Online PHP Script Execution</title>
+</head>
+<body>
+<?php
+  // Has curl. Use it!
+				$curl = curl_init("https://api.flickr.com/services/rest");
+				curl_setopt($curl, CURLOPT_POST, true);
+				$data=array("api_key"=> "091038bd077c0cb98ae9ad68c357f223"
+				,"format"=> "php_serial","license"=>  "4,5,6,7"
+				 ,"method"=> "flickr.photos.search","page"=> 1
+				 ,"per_page"=> 20);
+				curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+				$response = curl_exec($curl);
+				curl_close($curl);
+?>
+</body>
+</html>
